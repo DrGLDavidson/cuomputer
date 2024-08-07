@@ -220,7 +220,7 @@ async def handle_zoo_channel(message, channel):
         bool: Whether a response was generated and posted.
     """
     # Check if the message is in the lounge channel and the user's score is above the threshold
-    if channel.id in [channels["zoo"]] and meets_conditions(message):
+    if channel.id in [channels["zoo"]] and meets_conditions(message, ConversationStyle.GARRULOUS):
 
         message.gpt_system += " and you love to talk about animals and nature. you have a deep knowledge of animal facts and nature facts. In this channel, users are posting pics of their cute pets."
         # If the conditions are met, attempt to post a GPT response
